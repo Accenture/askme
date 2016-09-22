@@ -1,0 +1,299 @@
+@import "_settings.scss";
+@import "../bower_components/foundation/scss/foundation.scss";
+@import "../bower_components/foundation/scss/normalize.scss";
+@import "../bower_components/font-awesome/scss/font-awesome.scss";
+@import "_footer.scss";
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.mainMenu,
+.icon-bar {
+  max-height: 6rem;
+  background-color: $primary-color;
+  a:hover {
+    background-color: scale-color($primary-color, $lightness: $button-function-factor);
+  }
+}
+
+.loading {
+  text-align: center;
+  position: fixed;
+  top: 45%;
+  left: 48%;
+  width: 60px;
+  color: #3FA85E;
+}
+
+.custom-postfix {
+  height: 2.991rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.hint-text {
+  font-size: 0.8rem;
+}
+
+.alert-color {
+  color: red;
+}
+
+.logo {
+  float: left;
+  margin: 0.7em;
+  height: 4.3rem;
+}
+
+h1, h4 {
+  color: #32864b;
+  font-weight: bold;
+}
+
+.main-title {
+  float: none;
+
+  color: white;
+  font-size: 1.8rem;
+  margin: 0 0 0 0;
+  font-family: 'rotisSansSerif';
+
+  @media #{$medium-up} {
+    padding-top: 1.3rem;
+    font-size: 3em;
+    float: right;
+  }
+}
+
+@font-face {
+  font-family: 'rotisSansSerif';
+  src: url('/fonts/RotisSansSerifExtraBold75.ttf');
+  //src: url('/fonts/RotisSansSerifBold65.ttf');
+  font-weight: bold;
+}
+
+.custom-label {
+  padding: 0.4rem 2.0rem;
+  font-size: 1rem;
+  span {
+    font-weight: bold;
+  }
+}
+
+header {
+  padding: 0.5rem;
+  background-color: $primary-color;
+  color: white;
+}
+
+.control-section {
+  padding: 3rem 2rem;
+  background-image: url("/img/blurred-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  color: white;
+}
+
+#addQuestionForm {
+  margin-bottom: 1rem;
+}
+
+.top-bar {
+	background-color: #32864b;
+}
+
+.top-bar-section {
+  position: relative;
+  z-index: 300;
+}
+
+.fix-header-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.padded-column {
+  padding: 0 25px 0 25px;
+
+}
+
+.voting-buttons {
+  padding-top: 25px;
+  padding-right: 1rem;
+}
+
+.voting-nums {
+  @media #{medium-up} {
+    padding-top: 0.8rem;
+
+    .count {
+      font-size: 1.2rem;
+    }
+  }
+
+  padding-top: 0.5rem;
+
+  .count {
+    font-size: 1.5rem;
+  }
+}
+
+.votePositive {
+  @media #{medium-up} {
+    margin-right: 0.25rem;
+  }
+}
+
+.custom-button {
+  @include button();
+  margin-bottom: 0;
+}
+
+a{
+  margin-bottom: 0;
+}
+
+.twitter-share-button {
+  @include button(
+    // Background color. We can set $bg:false for a transparent background. Default: $primary-color.
+    $bg: #55acee
+    // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+  );
+  margin: 0 0 0 0.3rem;
+}
+
+.blue-button {
+  @include button(
+    // Background color. We can set $bg:false for a transparent background. Default: $primary-color.
+    $bg: #55acee,
+    $full-width: true
+    // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+  );
+  @media #{small-only} {
+    padding-left: 1.3rem !important;
+  }
+}
+
+.column-left-fix {
+  padding-left: 0 !important;
+}
+
+.column-right-fix {
+  padding-right: 0 !important;
+}
+
+button.disabled, .button[disabled] {
+  background-color: #CCC !important;
+}
+
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+    background-color: #CCC;
+}
+
+input[type=text] {
+  margin-bottom: 0;
+  background-color: #F6F6F6;
+  color: black;
+  padding: 0.96rem;
+  height: 3rem;
+}
+
+#addQuestionForm {
+  margin-bottom: 0;
+}
+
+.rating-margin {
+  padding-bottom: 7rem;
+  height: 4.5rem;
+  h4 {
+    color: white;
+  }
+}
+.text-logo {
+  color: black;
+  // font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem;
+  font-family: 'rotisSansSerif';
+}
+
+//rating
+form .stars {
+  background: url("/img/stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+}
+
+form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+form .stars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
+}
+form .stars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
+}
+form .stars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+form .stars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+form .stars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+form .stars label:hover ~ span {
+  background-position: 0 -30px;
+}
+form .stars label.star-5:hover ~ span {
+  width: 100% !important;
+}
+form .stars label.star-4:hover ~ span {
+  width: 80% !important;
+}
+form .stars label.star-3:hover ~ span {
+  width: 60% !important;
+}
+form .stars label.star-2:hover ~ span {
+  width: 40% !important;
+}
+form .stars label.star-1:hover ~ span {
+  width: 20% !important;
+}
+form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("/img/stars.png") repeat-x 0 -30px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}
+
+.feedback-margin {
+    margin-top: 0.5rem !important;
+    padding: 0.5 rem !important;
+    height: 1rem !important;
+}
