@@ -1,0 +1,6 @@
+frontend:
+    build: .
+    dockerfile: frontend.dockerfile
+    container_name: presenter-feedback-frontend
+    ports:
+      - "8080:8080"

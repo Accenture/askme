@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 columns"><b>{{takeName question}}</b></br>{{takeMessage question}}</div>
+        </div>
+        <div class="row collapse">
+            <div class="small-10 medium-10 columns voting-buttons">
+                <button class="votePositive custom-button radius tiny {{#if upvoteDisabled}}disabled{{/if}}" data-id="{{id}}" title="Vote"><i class="fa fa-thumbs-up fa-2x"></i></button>
+                <button class="voteNegative custom-button radius tiny {{#if downvoteDisabled}}disabled{{/if}}" data-id="{{id}}" title="Vote"><i class="fa fa-thumbs-down fa-2x"></i></button>
+                {{!-- feature: Twitter button --}}
+                {{#if shortMessage}}
+                  <a id="twitter-button" target="_blank" href="https://twitter.com/intent/tweet?text={{takeMessage question}}&hashtags=liquidapps" class="twitter-share-button button radius tiny" data-count="none" data-url=""><i class="fa fa-twitter fa-2x"></i></a>
+                {{/if}}
+                {{!-- end feature --}}
+            </div>
+            <div class="text-center small-2 medium-2 columns voting-nums">
+                <span class="count">{{votes}}</span></br> vote{{handleVotes votes}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <input type="text" class="feedback-margin" placeholder="Enter your Feedback here" />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.idea/
+.htaccess
+.sass-cache/
+.tmp/
+img/.raw
+bower_components
+api/node_modules
+app/bower_components
+node_modules
+dist/
+css/
+database/storage
+app/scripts/templates.js
+reports/
+xunit.xml
+jshintoutput.xml
+coverage

@@ -1,0 +1,54 @@
+<section class="control-section">
+
+    <div class="row" id="ratings" class="rating-margin"></div>
+
+    <form id="addQuestionForm" >
+        <div class="row uncollapse">
+            <div class="medium-offset-1 small-9 medium-8 columns column-right-fix">
+                <input type="text" id="question-textarea" rows="1" name="question" required placeholder="Enter your Question here" />
+                {{!-- feature: twitter button --}}
+                <div class="hint-text">
+                    <span id="counter">0</span> characters
+                </div>
+                {{!-- end feature --}}
+            </div>
+            <div class="left small-3 medium-2 columns column-left-fix">
+                <button class="blue-button custom-postfix" id="addQuestionForm-add">
+                    <span class="show-for-large-up">
+                        <i class="fa fa-paper-plane"></i> Post
+                    </span>
+                    <span class="hide-for-large-up">
+                        <i class="fa fa-paper-plane"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+      <div class="small-12 medium-offset-8 medium-4 text-center custom-label columns right">
+        Total Questions <span id="nr-of-questions">0</span>
+      </div>
+    </div>
+
+</section>
+<section>
+    <div class="row">
+        <div class="small-12 medium-6 columns padded-column">
+            <div class="row">
+                <div class="small-12 medium-12 columns text-center custom-label">
+                    <h4>New Questions</h4>
+                </div>
+            </div>
+            <div id="new-questions"></div>
+        </div>
+        <div class="small-12 medium-6 columns padded-column ">
+            <div class="row">
+                <div class="small-12 medium-12 columns text-center custom-label">
+                    <h4 >Most Popular Questions</h4>
+                </div>
+            </div>
+            <div id="top-questions"></div>
+        </div>
+    </div>
+</section>
