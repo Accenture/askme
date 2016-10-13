@@ -1,6 +1,6 @@
-# ask-me-test
+# ask-me
 
-This application is used as part of the *Lean Engineering* demo.
+This application is used as part of a *Lean Engineering* or *DevOps*  demo.
 **This is just a frontend part** of the app and in order to run it successfully
 you will need to get the backend part as well.
 
